@@ -1,0 +1,11 @@
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: darkgrey;
+}
+
+body {
+  background-color: aqua;
+}
