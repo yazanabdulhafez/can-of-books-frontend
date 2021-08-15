@@ -20,7 +20,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends React.Component {
 
   render() {
-    console.log( 'app', this.props );
+    console.log('app', this.props);
     return (
       <>
         <Router>
@@ -48,4 +48,4 @@ class App extends React.Component {
   }
 }
 
-export default withAuth0( App );
+export default withAuth0(App);
