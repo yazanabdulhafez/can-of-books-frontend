@@ -6,6 +6,7 @@ import LoginButton from './loginButton';
 import LogoutButton from './logoutButton';
 import './Header.css';
 import { Container } from 'react-bootstrap';
+import { withAuth0 } from '@auth0/auth0-react';
 
 class Header extends React.Component {
   render() {
@@ -32,4 +33,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default withAuth0(Header);
