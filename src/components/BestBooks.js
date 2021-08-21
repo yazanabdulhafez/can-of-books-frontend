@@ -14,7 +14,8 @@ class MyFavoriteBooks extends React.Component {
         <p style={{ fontSize: '1.5rem', fontFamily: 'Josefin Sans', margin: '2vw' }}>
           This is a collection of my favorite books
         </p>
-        <Container>
+        
+        <Container style={{marginBottom: '10vw'}} >
           <Row style={{marginTop: '5vw'}} >
             <BestBook />
           </Row>
