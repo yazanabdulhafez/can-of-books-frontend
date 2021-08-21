@@ -26,6 +26,7 @@
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 15-08-2021 5:00pm - Application now has a fully-functional for Authentication part.
+21-08-2021 9:00pm - Application now has a fully-functional
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
@@ -50,3 +51,41 @@ Start time: 15/8/2021 2:20pm
 Finish time:15/8/2021 5:00pm
 
 Actual time needed to complete: 2:40 hours
+
+-----------------------------------------------------
+
+Name of feature:Book Component
+Estimate of time needed to complete:2 hours
+
+Start time: 20/8/2021 6:20pm
+Finish time:20/8/2021 8:00pm
+
+Actual time needed to complete: 2:40 hours
+
+-----------------------------------------------------
+
+Name of feature:update book details
+Estimate of time needed to complete:2 hours
+
+Start time: 20/8/2021 6:20pm
+Finish time:20/8/2021 8:00pm
+
+Actual time needed to complete:2 hours
+
+-----------------------------------------------------
+Name of feature: add a new book
+Estimate of time needed to complete:2 hours
+
+Start time: 21/8/2021 12:00pm
+Finish time:21/8/2021 2:00pm
+
+Actual time needed to complete: 2 hours
+
+-----------------------------------------------------
+Name of feature: remove books
+Estimate of time needed to complete:2 hours
+
+Start time: 21/8/2021 9:00am
+Finish time:21/8/2021 12:00am
+
+Actual time needed to complete: 3 hours
