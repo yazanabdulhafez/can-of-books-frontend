@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { withAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
-import { Card, ListGroup, Button } from "react-bootstrap";
+import { Card, ListGroup, Button, Container } from "react-bootstrap";
 import BookFormModal from "./BookFormModal";
 import UpdateForm from "./UpdateForm";
 
@@ -44,9 +44,9 @@ class BestBook extends React.Component {
 
     let rwe = axios.get(BooksUrl)
       .then(response => {
-        console.log(response.data.books);
+        console.log(response.data);
         this.setState({
-          books: response.data.books
+          books: response.data
         })
 
       }).catch(err => console.error(err));
@@ -134,75 +134,71 @@ class BestBook extends React.Component {
 
 
   render() {
-    return ( <
-      >
-      <
-      Button onClick = { this.showAddBookForm }
-      style = {
-        { marginBottom: "30px", backgroundColor: "#5E8B7E", color: "white", border: "none" }
-      } >
-      ADD A NEW BOOK <
-      /Button> {
-      this.state.showAddBookForm && ( <
-        BookFormModal closeAddBookForm = { this.closeAddBookForm }
-        addBook = { this.addBook }
-        updateBookName = { this.updateBookName }
-        updateDiscOfBook = { this.updateDiscOfBook }
-        updateStatusOfBook = { this.updateStatusOfBook }
-        />
-      )
-    } {
-      this.state.showUpdate && ( <
-        UpdateForm update = { this.update }
-        updateBookName = { this.updateBookName }
-        updateDiscOfBook = { this.updateDiscOfBook }
-        updateStatusOfBook = { this.updateStatusOfBook }
-        books = { this.state.books[this.state.index] }
-        />
-      )
-    }
-
-    {
-      this.state.books.length > 0 &&
-        this.state.books.map((element, index) => {
-          return ( <
-            >
-            <
-            Card key = { index }
-            style = {
-              { width: "18rem", margin: "30px auto" }
-            } >
-            <
-            ListGroup variant = "flush" >
-            <
-            ListGroup.Item as = "li" >
-            Book Name: { element.name } <
-            /ListGroup.Item> <
-            ListGroup.Item > Description: { element.description } < /ListGroup.Item> <
-            ListGroup.Item > Status: { element.status } < /ListGroup.Item> < /
-            ListGroup > <
-            Button className = "m-3 btn btn-danger"
-            onClick = {
-              () => this.deleteBook(index)
-            } >
-            Delete Book <
-            /Button> <
-            Button className = "m-3"
-            onClick = {
-              () => this.showUpdateForm(index)
-            } >
-            Update Book <
-            /Button> < /
-            Card >
-
-            <
-            />
-          );
-        })
-    } <
-    />
-  );
-}
+    return (
+      <>
+        <Button
+          onClick={this.showAddBookForm}
+          style={{ marginBottom: "30px", backgroundColor: "#465475", color: "white", border: "none" }}
+        >
+          ADD A NEW BOOK
+        </Button>
+        {this.state.showAddBookForm && (
+          <BookFormModal
+            closeAddBookForm={this.closeAddBookForm}
+            addBook={this.addBook}
+            updateBookName={this.updateBookName}
+            updateDiscOfBook={this.updateDiscOfBook}
+            updateStatusOfBook={this.updateStatusOfBook}
+          />
+        )}
+        {this.state.showUpdate && (
+          <UpdateForm
+            update={this.update}
+            updateBookName={this.updateBookName}
+            updateDiscOfBook={this.updateDiscOfBook}
+            updateStatusOfBook={this.updateStatusOfBook}
+            books={this.state.books[this.state.index]}
+          />
+        )}
+        <div style={{ display: "flex", flexWrap: "wrap",marginBottom:'20px'}}>
+          {this.state.books.map((element, indx) => {
+            return (
+              <>
+                <Card style={{ width: "18rem",height:'20vw' , margin: "50px auto" }}>
+                  <Container>
+                  <ListGroup variant="flush">
+                    <ListGroup.Item as="li">
+                      Book Name:
+                      {element.name}
+                    </ListGroup.Item>
+                    <ListGroup.Item>Description: {element.description}</ListGroup.Item>
+                    <ListGroup.Item>Status: {element.status}</ListGroup.Item>
+                  </ListGroup>
+                  </Container>
+                  <Card.Footer>
+                  <Button
+                    className="m-3 btn btn-danger"
+                    onClick={() => this.deleteBook(indx)}
+                    style={{ backgroundColor: "#465475", color: "white", border: "none" }}
+                  >
+                    Delete Book
+                  </Button>
+                  <Button
+                    className="m-3"
+                    onClick={() => this.showUpdateForm(indx)}
+                    style={{ backgroundColor: "#465475", color: "white", border: "none" }}
+                  >
+                    Update Book
+                  </Button>
+                  </Card.Footer>
+                </Card>
+              </>
+            );
+          })}
+        </div>
+      </>
+    );
+  }
 }
 export default withAuth0(BestBook);
 
