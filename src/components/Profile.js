@@ -26,7 +26,7 @@ export class Profile extends Component {
     return (
       this.props.auth0.isAuthenticated &&
       <div><h1>Hello {this.props.auth0.user.name}</h1>
-        <Card style={{ width: '40rem', marginTop: '5vw', border: 'solid 5px' }}>
+        <Card style={{ width: '40rem', margin: '10vw auto', border: 'solid 5px' }}>
           <Card.Title>
             <h2>Username:{this.props.auth0.user.name}</h2>
             <h2 style={{ color: 'red' }}>email:{this.props.auth0.user.email}</h2>

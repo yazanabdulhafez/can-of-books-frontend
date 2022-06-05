@@ -5,8 +5,8 @@ import { Navbar, Container } from 'react-bootstrap';
 class Footer extends React.Component {
   render() {
     return (
-      <footer>
-        <Navbar bg='dark' variant='dark' fixed='bottom'>
+      <footer  style={{position:'absolute',left:'0',width: '100%'}}>
+        <Navbar bg='dark' variant='dark'>
           <Container style={{ justifyContent: 'center' }}>
             <Navbar.Brand href='https://github.com/yazanabdulhafez'>
               All Rights Reserved&copy;Yazan Alkharabsheh

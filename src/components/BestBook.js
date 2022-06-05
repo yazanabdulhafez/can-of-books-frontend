@@ -160,11 +160,11 @@ class BestBook extends React.Component {
             books={this.state.books[this.state.index]}
           />
         )}
-        <div style={{ display: "flex", flexWrap: "wrap",marginBottom:'20px'}}>
+        <div style={{ display: "flex", flexWrap: "wrap"}}>
           {this.state.books.map((element, indx) => {
             return (
               <>
-                <Card style={{ width: "18rem",height:'20vw' , margin: "50px auto" }}>
+                <Card style={{ width: "18rem",height:'20rem' , margin: "40px auto" }}>
                   <Container>
                   <ListGroup variant="flush">
                     <ListGroup.Item as="li">
