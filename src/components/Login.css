@@ -1,4 +1,17 @@
-.card{
-  margin: auto;
-  text-align: center;
+.login_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_card {
+  width: 20rem;
+  height: 10rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

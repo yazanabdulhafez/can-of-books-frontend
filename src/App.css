@@ -2,3 +2,32 @@ body {
   height: 100%;
   background-color: bisque;
 }
+
+.home {
+  min-height: 80vh;
+}
+
+.profile_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 84vh;
+}
+
+.card {
+  width: '40rem';
+  margin: '10vw auto';
+  border: 'solid 5px';
+}
+
+.empty_div {
+  min-height: 80vh;
+}
+
+.empty_div h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+}
